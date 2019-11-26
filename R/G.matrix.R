@@ -12,7 +12,7 @@ G.matrix <- function(M, method=c("VanRaden", "UAR", "UARadj", "GK"), format=c("w
   p <- colMeans(M)/2
   
   if(any(p == 0 | p == 1))
-    stop("Monomorphic markers are no allowed")
+    stop("Monomorphic markers are not allowed")
 
   WWG <- function(M, p){
     w <- scale(x = M, center = T, scale = F)
